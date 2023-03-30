@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Weight</label>
+    <input id="weightInput" type="number"><br><br>
+    <label for="">Height</label>
+    <input id="heightInput" type="number"><br><br>
+    <button onclick="calculateBtn()">clicked</button>
+    <!-- nicher line ta apnar theke neya -->
+    <p>BMI = <span id="BMI"></span></p> 
+
+    <script>
+// Part 1: Building the BMI Calculator
+// Create an HTML file with a form containing two input fields with IDs of "weightInput" and "heightInput", and a button with an ID of "calculateBtn".Using JavaScript, write a function that calculates the Body Mass Index (BMI) of a person when the "calculateBtn" is clicked.
+        // The BMI formula is: BMI = weight (kg) / (height (m) * height (m)).
+        function calculateBtn(){
+            var Weight=parseFloat(document.getElementById("weightInput").value);
+            var Height=parseFloat(document.getElementById("heightInput").value);
+            var bmi = (Weight/(Height*Height))
+            // ei line o apnar idea
+          document.getElementById("BMI").innerHTML=bmi;
+                  
+        }
+    </script>
+</body>
+</html>
